@@ -3,31 +3,26 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>MIxWich</title>
+    <title>MixWich</title>
 
-    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,700;1,700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
       rel="stylesheet"
     />
 
-    <!-- Icons -->
-    <script src="https://unpkg.com/feather-icons"></script>
-
-    <!-- Styles -->
     <link rel="stylesheet" href="css/style.css" />
+    <script src="https://unpkg.com/feather-icons"></script>
   </head>
   <body>
-    <!--Navbar start-->
     <nav class="navbar">
-      <a href="#" class="navbar-logo">MIx<span>Wich</span>.</a>
+      <a href="#" class="navbar-logo">Mix<span>Wich</span>.</a>
 
       <div class="navbar-nav">
         <ul>
-          <li><a href="home">Home</a></li>
-          <li><a href="#about">Menu</a></li>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#menu">Menu</a></li>
           <li><a href="#account">Account</a></li>
           <li><a href="#event">Event</a></li>
           <li><a href="#location">Location</a></li>
@@ -35,29 +30,274 @@
       </div>
 
       <div class="navbar-extra">
-        <a href="#" id="search"><i data-feather="search"></i></a>
-        <a href="#" id="shopping-card"><i data-feather="shopping-cart"></i></a>
-        <a href="#" id="message"><i data-feather="message-circle"></i></a>
+        <a href="#"><i data-feather="search"></i></a>
+        <a href="#"><i data-feather="shopping-cart"></i></a>
+        <a href="#"><i data-feather="message-circle"></i></a>
         <a href="#" id="hamburger-menu"><i data-feather="menu"></i></a>
       </div>
     </nav>
-    <!--Navbar end-->
 
-    <!-- Hero Section Start-->
     <section class="hero" id="home">
-      <main class="content">
-        <h1>BAKED WITH LOVE, TASTED WITH JOY</h1>
-        <a href="#" class="cta">EXPLORE OUR MENU</a>
-      </main>
+      <div class="content">
+        <h1>Crafted by Us, Designed by You.</h1>
+        <a href="#menu" class="cta">Explore Our Menu</a>
+      </div>
     </section>
-    <!-- Hero Section End -->
 
-    <!-- Icons -->
-    <script>
-      feather.replace();
-    </script>
+    <section class="menu" id="menu">
+      <h2>Our <span>Menu</span>.</h2>
 
-    <!-- Javascript -->
+      <div class="menu-filter">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="sandwiches">Sandwiches</button>
+        <button class="filter-btn" data-filter="salads">Salads</button>
+        <button class="filter-btn" data-filter="sides">Sides</button>
+        <button class="filter-btn" data-filter="sauces">Sauces</button>
+        <button class="filter-btn" data-filter="drinks">Drinks</button>
+      </div>
+
+      <div class="menu-container">
+        <div class="menu-card sandwiches">
+          <img src="images/beef-sandwich.jpg" class="menu-card-img" alt="" />
+          <h3 class="menu-card-title">Smoky Beef Artisan</h3>
+          <p class="menu-card-desc">
+            Tender beef strips, melted cheese, and fresh veggies on garlic
+            sourdough.
+          </p>
+          <p class="menu-card-price">IDR 55K</p>
+          <button class="add-to-cart">
+            <i data-feather="shopping-cart"></i>Add
+          </button>
+        </div>
+
+        <div class="menu-card sandwiches">
+          <img src="images/tuna-mayo.jpg" class="menu-card-img" alt="" />
+          <h3 class="menu-card-title">Tuna Mayo Delight</h3>
+          <p class="menu-card-desc">
+            Creamy tuna flakes with premium mayo and crunchy cucumber.
+          </p>
+          <p class="menu-card-price">IDR 45K</p>
+          <button class="add-to-cart">
+            <i data-feather="shopping-cart"></i>Add
+          </button>
+        </div>
+
+        <div class="menu-card sandwiches">
+          <img src="images/cheese-beef.png" class="menu-card-img" alt="" />
+          <h3 class="menu-card-title">Ultimate Cheese Beef</h3>
+          <p class="menu-card-desc">
+            Tender beef slices topped with melted mozzarella cheese.
+          </p>
+          <p class="menu-card-price">IDR 48K</p>
+          <button class="add-to-cart">
+            <i data-feather="shopping-cart"></i>Add
+          </button>
+        </div>
+
+        <div class="menu-card sandwiches">
+          <img
+            src="images/chicken-teriyaki.webp"
+            class="menu-card-img"
+            alt=""
+          />
+          <h3 class="menu-card-title">Chicken Teriyaki</h3>
+          <p class="menu-card-desc">
+            Sweet savory chicken strips with fresh vegetables.
+          </p>
+          <p class="menu-card-price">IDR 37K</p>
+          <button class="add-to-cart">
+            <i data-feather="shopping-cart"></i>Add
+          </button>
+        </div>
+
+        <div class="menu-card sandwiches">
+          <img src="images/egg-mayo.webp" class="menu-card-img" alt="" />
+          <h3 class="menu-card-title">Egg Mayo</h3>
+          <p class="menu-card-desc">Creamy egg mayo served on artisan bread.</p>
+          <p class="menu-card-price">IDR 42K</p>
+          <button class="add-to-cart">
+            <i data-feather="shopping-cart"></i>Add
+          </button>
+        </div>
+
+        <div class="menu-card salads">
+          <img src="images/chicken-salad.jpg" class="menu-card-img" alt="" />
+          <h3 class="menu-card-title">Roasted Chicken Salad</h3>
+          <p class="menu-card-desc">
+            Fresh greens topped with roasted chicken and dressing.
+          </p>
+          <p class="menu-card-price">IDR 38K</p>
+          <button class="add-to-cart">
+            <i data-feather="shopping-cart"></i>Add
+          </button>
+        </div>
+
+        <div class="menu-card salads">
+          <img src="images/caesar-salad.jpg" class="menu-card-img" alt="" />
+          <h3 class="menu-card-title">Classic Caesar Salad</h3>
+          <p class="menu-card-desc">
+            Romaine lettuce, parmesan cheese, and croutons.
+          </p>
+          <p class="menu-card-price">IDR 36K</p>
+          <button class="add-to-cart">
+            <i data-feather="shopping-cart"></i>Add
+          </button>
+        </div>
+
+        <div class="menu-card salads">
+          <img src="images/tuna-salad.webp" class="menu-card-img" alt="" />
+          <h3 class="menu-card-title">Tuna Garden Salad</h3>
+          <p class="menu-card-desc">Fresh veggies with seasoned tuna chunks.</p>
+          <p class="menu-card-price">IDR 40K</p>
+          <button class="add-to-cart">
+            <i data-feather="shopping-cart"></i>Add
+          </button>
+        </div>
+
+        <div class="menu-card sides">
+          <img src="images/hash-brown.jpg" class="menu-card-img" alt="" />
+          <h3 class="menu-card-title">Golden Hashbrown</h3>
+          <p class="menu-card-desc">
+            Two pieces of crispy golden-fried potato patties.
+          </p>
+          <p class="menu-card-price">IDR 15K</p>
+          <button class="add-to-cart">
+            <i data-feather="shopping-cart"></i>Add
+          </button>
+        </div>
+
+        <div class="menu-card sides">
+          <img src="images/french-fries.jpg" class="menu-card-img" alt="" />
+          <h3 class="menu-card-title">French Fries</h3>
+          <p class="menu-card-desc">Crispy fries with sea salt seasoning.</p>
+          <p class="menu-card-price">IDR 18K</p>
+          <button class="add-to-cart">
+            <i data-feather="shopping-cart"></i>Add
+          </button>
+        </div>
+
+        <div class="menu-card sides">
+          <img src="images/onion-rings.jpg" class="menu-card-img" alt="" />
+          <h3 class="menu-card-title">Onion Rings</h3>
+          <p class="menu-card-desc">Crunchy battered onion rings.</p>
+          <p class="menu-card-price">IDR 20K</p>
+          <button class="add-to-cart">
+            <i data-feather="shopping-cart"></i>Add
+          </button>
+        </div>
+
+        <div class="menu-card sides">
+          <img src="images/chicken-nuggets.webp" class="menu-card-img" alt="" />
+          <h3 class="menu-card-title">Chicken Nuggets</h3>
+          <p class="menu-card-desc">Five crispy chicken nuggets.</p>
+          <p class="menu-card-price">IDR 22K</p>
+          <button class="add-to-cart">
+            <i data-feather="shopping-cart"></i>Add
+          </button>
+        </div>
+
+        <div class="menu-card sides">
+          <img src="images/cheese-bites.webp" class="menu-card-img" alt="" />
+          <h3 class="menu-card-title">Cheese Bites</h3>
+          <p class="menu-card-desc">Golden fried cheese bites with dip.</p>
+          <p class="menu-card-price">IDR 24K</p>
+          <button class="add-to-cart">
+            <i data-feather="shopping-cart"></i>Add
+          </button>
+        </div>
+
+        <div class="menu-card sauces">
+          <img src="images/honey-mustard.webp" class="menu-card-img" alt="" />
+          <h3 class="menu-card-title">Honey Mustard</h3>
+          <p class="menu-card-desc">Sweet and tangy artisan sauce.</p>
+          <p class="menu-card-price">IDR 25K</p>
+          <button class="add-to-cart">
+            <i data-feather="shopping-cart"></i>Add
+          </button>
+        </div>
+
+        <div class="menu-card sauces">
+          <img src="images/chili-sauce.jpg" class="menu-card-img" alt="" />
+          <h3 class="menu-card-title">Spicy Chili Sauce</h3>
+          <p class="menu-card-desc">Hot chili sauce with rich flavor.</p>
+          <p class="menu-card-price">IDR 20K</p>
+          <button class="add-to-cart">
+            <i data-feather="shopping-cart"></i>Add
+          </button>
+        </div>
+
+        <div class="menu-card sauces">
+          <img src="images/bbq-sauce.jpg" class="menu-card-img" alt="" />
+          <h3 class="menu-card-title">Smoky BBQ Sauce</h3>
+          <p class="menu-card-desc">Classic smoky barbecue blend.</p>
+          <p class="menu-card-price">IDR 23K</p>
+          <button class="add-to-cart">
+            <i data-feather="shopping-cart"></i>Add
+          </button>
+        </div>
+
+        <div class="menu-card sauces">
+          <img src="images/garlic-aioli.webp" class="menu-card-img" alt="" />
+          <h3 class="menu-card-title">Garlic Aioli</h3>
+          <p class="menu-card-desc">Creamy garlic mayo dip.</p>
+          <p class="menu-card-price">IDR 24K</p>
+          <button class="add-to-cart">
+            <i data-feather="shopping-cart"></i>Add
+          </button>
+        </div>
+
+        <div class="menu-card sauces">
+          <img src="images/truffle-mayo.jpg" class="menu-card-img" alt="" />
+          <h3 class="menu-card-title">Truffle Mayo</h3>
+          <p class="menu-card-desc">Luxury mayo with truffle aroma.</p>
+          <p class="menu-card-price">IDR 28K</p>
+          <button class="add-to-cart">
+            <i data-feather="shopping-cart"></i>Add
+          </button>
+        </div>
+
+        <div class="menu-card drinks">
+          <img src="images/iced-latte.jpg" class="menu-card-img" alt="" />
+          <h3 class="menu-card-title">Iced Artisan Latte</h3>
+          <p class="menu-card-desc">Fresh brewed coffee with creamy milk.</p>
+          <p class="menu-card-price">IDR 28K</p>
+          <button class="add-to-cart">
+            <i data-feather="shopping-cart"></i>Add
+          </button>
+        </div>
+
+        <div class="menu-card drinks">
+          <img src="images/americano.jpg" class="menu-card-img" alt="" />
+          <h3 class="menu-card-title">Iced Americano</h3>
+          <p class="menu-card-desc">Bold espresso over ice.</p>
+          <p class="menu-card-price">IDR 24K</p>
+          <button class="add-to-cart">
+            <i data-feather="shopping-cart"></i>Add
+          </button>
+        </div>
+
+        <div class="menu-card drinks">
+          <img src="images/matcha-latte.jpg" class="menu-card-img" alt="" />
+          <h3 class="menu-card-title">Matcha Latte</h3>
+          <p class="menu-card-desc">Premium matcha blended with milk.</p>
+          <p class="menu-card-price">IDR 30K</p>
+          <button class="add-to-cart">
+            <i data-feather="shopping-cart"></i>Add
+          </button>
+        </div>
+
+        <div class="menu-card drinks">
+          <img src="images/lemon-tea.webp" class="menu-card-img" alt="" />
+          <h3 class="menu-card-title">Fresh Lemon Tea</h3>
+          <p class="menu-card-desc">Refreshing tea with lemon slices.</p>
+          <p class="menu-card-price">IDR 20K</p>
+          <button class="add-to-cart">
+            <i data-feather="shopping-cart"></i>Add
+          </button>
+        </div>
+      </div>
+    </section>
+
     <script src="js/script.js"></script>
   </body>
 </html>
