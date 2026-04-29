@@ -298,6 +298,226 @@
       </div>
     </section>
 
+    <section class="register-section">
+      <div class="register-wrapper">
+        <div class="register-left">
+          <div class="left-register-content active">
+            <div class="brand">Mix<span>Wich</span>.</div>
+            <h2>Join the<br />MixWich Family</h2>
+            <p>
+              Create your account and start ordering your favourite custom
+              sandwiches today.
+            </p>
+
+            <div class="perks">
+              <div class="perk-item">
+                <i data-feather="check-circle"></i> Exclusive member discounts
+              </div>
+              <div class="perk-item">
+                <i data-feather="check-circle"></i> Early access to new menu
+              </div>
+              <div class="perk-item">
+                <i data-feather="check-circle"></i> Track your orders in
+                real-time
+              </div>
+              <div class="perk-item">
+                <i data-feather="check-circle"></i> Custom sandwich presets
+                saved
+              </div>
+            </div>
+
+            <p class="login-link">
+              Already have an account? <a id="goToLogin">Sign in</a>
+            </p>
+          </div>
+
+          <div class="left-login-content">
+            <div class="brand">Mix<span>Wich</span>.</div>
+            <h2>Welcome<br />Back! 👋</h2>
+            <p>
+              Sign in to your MixWich account to continue ordering your
+              favourite sandwiches.
+            </p>
+
+            <div class="perks">
+              <div class="perk-item">
+                <i data-feather="clock"></i> View your order history
+              </div>
+              <div class="perk-item">
+                <i data-feather="star"></i> Access your saved favourites
+              </div>
+              <div class="perk-item">
+                <i data-feather="gift"></i> Claim your loyalty rewards
+              </div>
+            </div>
+
+            <p class="login-link">
+              Don't have an account?
+              <a id="goToRegister">Sign up</a>
+            </p>
+          </div>
+        </div>
+
+        <div class="register-right">
+          <h3>Create Account</h3>
+          <p class="subtitle">Fill in the details below to get started</p>
+
+          <form id="registerForm" novalidate>
+            <div class="form-group">
+              <label for="fullName">Full Name <span class="req">*</span></label>
+              <span class="input-icon"><i data-feather="user"></i></span>
+              <input
+                type="text"
+                id="fullName"
+                class="form-input"
+                placeholder=" e.g. Angel Rica"
+              />
+              <div class="field-msg" id="fullName-msg"></div>
+            </div>
+
+            <div class="form-group">
+              <label for="phone">Phone Number <span class="req">*</span></label>
+              <span class="input-icon"><i data-feather="phone"></i></span>
+              <input
+                type="tel"
+                id="phone"
+                class="form-input"
+                placeholder=" 081211508668"
+              />
+              <div class="field-msg" id="phone-msg"></div>
+            </div>
+
+            <div class="form-group">
+              <label for="email"
+                >Email Address <span class="req">*</span></label
+              >
+              <span class="input-icon"><i data-feather="mail"></i></span>
+              <input
+                type="email"
+                id="email"
+                class="form-input"
+                placeholder=" angelrica29@gmail.com"
+              />
+              <div class="field-msg" id="email-msg"></div>
+            </div>
+
+            <div class="form-group">
+              <label for="product"
+                >Favourite Product <span class="req">*</span></label
+              >
+              <span class="input-icon"
+                ><i data-feather="shopping-bag"></i
+              ></span>
+
+              <select id="category" class="form-select">
+                <option value="">-- Select Category --</option>
+                <option value="sandwiches">🥪 Sandwiches</option>
+                <option value="salads">🥗 Salads</option>
+                <option value="sides">🍟 Sides</option>
+                <option value="sauces">🫙 Sauces</option>
+                <option value="drinks">🥤 Drinks</option>
+              </select>
+
+              <select id="product" class="form-select">
+                <option value="">-- Select Product --</option>
+              </select>
+
+              <div class="field-msg" id="product-msg"></div>
+            </div>
+
+            <div class="form-group">
+              <label for="address"
+                >Delivery Address <span class="req">*</span></label
+              >
+              <span class="input-icon"><i data-feather="map-pin"></i></span>
+
+              <textarea
+                id="address"
+                class="form-textarea"
+                placeholder=" Street, city, postal code"
+              ></textarea>
+
+              <div class="field-msg" id="address-msg"></div>
+            </div>
+
+            <div class="form-group">
+              <label>Preferred Order Method <span class="req">*</span></label>
+
+              <div class="radio-group">
+                <label class="radio-label">
+                  <input type="radio" name="orderMethod" value="delivery" />
+                  🚚 Delivery
+                </label>
+
+                <label class="radio-label">
+                  <input type="radio" name="orderMethod" value="pickup" />
+                  🏃 Pickup
+                </label>
+
+                <label class="radio-label">
+                  <input type="radio" name="orderMethod" value="dinein" />
+                  🍽️ Dine-in
+                </label>
+              </div>
+
+              <div class="field-msg" id="orderMethod-msg"></div>
+            </div>
+
+            <button type="submit" class="btn-register">Create Account</button>
+          </form>
+        </div>
+
+        <div class="right-panel" id="loginPanel">
+          <h3>Welcome Back</h3>
+          <p class="subtitle">Sign in to your MixWich account</p>
+
+          <form id="loginForm" novalidate>
+            <div class="form-group">
+              <label for="loginEmail">Email Address</label>
+              <span class="input-icon"><i data-feather="mail"></i></span>
+              <input
+                type="email"
+                id="loginEmail"
+                class="form-input"
+                placeholder="email@gmail.com"
+              />
+              <div class="field-msg" id="loginEmail-msg"></div>
+            </div>
+
+            <div class="form-group">
+              <label for="loginPassword">Password</label>
+              <span class="input-icon"><i data-feather="lock"></i></span>
+
+              <input
+                type="password"
+                id="loginPassword"
+                class="form-input"
+                placeholder="Enter password"
+              />
+
+              <button type="button" id="togglePass" class="toggle-pass">
+                <i data-feather="eye" id="eyeIcon"></i>
+              </button>
+
+              <div class="field-msg" id="loginPassword-msg"></div>
+            </div>
+
+            <button type="submit" class="btn-register">Sign In</button>
+
+            <p class="bottom-link">
+              Don't have an account?
+              <a id="goToRegister2">Create one</a>
+            </p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <div class="toast" id="toast">
+      <i data-feather="check-circle"></i>
+      Success!
+    </div>
+
     <script src="js/script.js"></script>
   </body>
 </html>
