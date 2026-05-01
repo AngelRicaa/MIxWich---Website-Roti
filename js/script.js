@@ -215,3 +215,50 @@ if (category && product) {
     }
   });
 }
+
+/* Event */
+const sideItems = document.querySelectorAll(".event-side-item");
+
+const heroBanner = document.getElementById("heroBanner");
+const heroBadge = document.getElementById("heroBadge");
+const heroTitle = document.getElementById("heroTitle");
+const heroDesc = document.getElementById("heroDesc");
+const heroDate = document.getElementById("heroDate");
+
+const bannerClass = {
+  ongoing: "",
+  upcoming: "banner--green",
+};
+
+const iconClass = {
+  "🏆": "side-icon--orange",
+  "🎉": "side-icon--orange",
+  "💳": "side-icon--orange",
+  "🥗": "side-icon--green",
+  "🍔": "side-icon--brown",
+};
+
+sideItems.forEach((item) => {
+  item.addEventListener("click", () => {
+    sideItems.forEach((el) => el.classList.remove("active"));
+    item.classList.add("active");
+
+    const icon = item.dataset.icon;
+    const status = item.dataset.status;
+    const title = item.dataset.title;
+    const desc = item.dataset.desc;
+    const date = item.dataset.date;
+
+    heroBanner.textContent = icon;
+    heroBanner.className = "event-hero-banner " + (bannerClass[status] || "");
+
+    heroBadge.textContent = status === "ongoing" ? "Ongoing" : "Upcoming";
+    heroBadge.className = "badge " + status;
+
+    heroTitle.textContent = title;
+    heroDesc.textContent = desc;
+    heroDate.querySelector("span").textContent = date;
+
+    feather.replace();
+  });
+});
